@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task - Attribute Binding</title>
+    <title>Task - Computed Properties and Methods</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,19 +25,19 @@
             <table>
                 <thead>
                     <tr>
-                        <th v-for="columnName in Object.keys(books[0])" :key="columnName">
+                        <th v-for="columnName in columnName_tableHead" :key="columnName">
                             {{ columnName }}
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="{ title, isbn, author, publisher, price, numPages } of books" :key="isbn">
-                        <td>{{ title }}</td>
-                        <td>{{ isbn }}</td>
-                        <td>{{ author }}</td>
-                        <td>{{ publisher }}</td>
-                        <td><span class="strike">{{ price }}</span></td>
-                        <td>{{ numPages }}</td>
+                    <tr v-for="{ title, isbn, author, publisher, price, numPages } of onlyOReillyBooks" :key="isbn">
+                        <td v-text="title"></td>
+                        <td v-text="isbn"></td>
+                        <td v-text="author"></td>
+                        <td v-text="publisher"></td>
+                        <td><span class="strike">{{ price }}</span>{{ discountedPrice(price) }}</td>
+                        <td v-text="numPages"></td>
                     </tr>
                 </tbody>
             </table>
