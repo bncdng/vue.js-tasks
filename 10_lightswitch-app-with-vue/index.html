@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="">
-    <button id="toggle-btn">Toggle Light</button>
+<body>
+    <div id="app">
+    <button id="toggle-btn" @click="toggleLight" :class="{ 'dark': isDark }">Toggle Light</button>
+</div>
     <script src="https://unpkg.com/vue@latest"></script>
     <script src="script.js"></script>
 </body>

@@ -1,14 +1,19 @@
 Vue.createApp({
   data() {
     return {
-      text: "Hello Title",
-      onClassName: "is-active",
+      isDark: false,
     };
   },
   methods: {
-    active() {
-      document.title = this.text;
-      document.body.classList.add(this.onClassName);
+    toggleLight() {
+      this.isDark = !this.isDark;
+      if (this.isDark) {
+        document.body.classList.add("dark");
+        document.title = "Good Night";
+      } else {
+        document.body.classList.remove("dark");
+        document.title = "Good Morning";
+      }
     },
   },
 }).mount("#app");
