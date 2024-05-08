@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#red {
+  accent-color: red;
+}
+
+#green {
+  accent-color: green;
+}
+
+#blue {
+  accent-color: blue;
+}

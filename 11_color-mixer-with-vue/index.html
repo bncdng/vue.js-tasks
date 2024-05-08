@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Color Mixer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <!-- Slider R  -->
+            <div><label for="red">r</label>
+                <input type="range" min="0" max="255" value="50" step="1" id="red" @click="showColor">
+            </div>
+            <!-- Slider G -->
+            <div>
+                <label for="green">g</label>
+                <input type="range" min="0" max="255" value="50" step="1" id="green" @click="showColor">
+            </div>
+            <!-- Slider B -->
+            <div>
+                <label for="blue">b</label>
+                <input type="range" min="0" max="255" value="50" step="1" id="blue" @click="showColor">
+            </div>
+            <!-- Hex -->
+            <div id="colorHex">{{ colorHex }}</div>
+            <button id="randomColor_btn" @click="randomColor">Random Color</button>
+        </header>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
